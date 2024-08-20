@@ -1,0 +1,23 @@
+<div class="admin-layout">
+  <header>
+
+    <h1>Admin Panel</h1>
+  </header>
+
+  <div class="admin-content">
+
+    <nav class="admin-sidebar">
+      <ul>
+        <li><a routerLink="/admin/home">Home</a></li>
+        <li><a routerLink="/admin/login">Login</a></li>
+        <li><a routerLink="/admin/signup">Sign Up</a></li>
+        <li><a routerLink="/admin/about">About</a></li>
+      </ul>
+    </nav>
+
+
+    <main class="admin-main">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

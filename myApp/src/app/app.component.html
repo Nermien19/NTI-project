@@ -1,0 +1,83 @@
+
+
+<!--
+<app-home></app-home>
+<app-about></app-about>
+<app-portfolio></app-portfolio>
+<app-skills></app-skills>
+<app-contact></app-contact>
+
+  -->
+  <!-- <app-navbar></app-navbar>
+
+<section id="home">
+  <app-home></app-home>
+</section>
+
+
+
+<section id="about">
+  <app-about></app-about>
+</section>
+
+<section id="portfolio">
+  <app-portfolio></app-portfolio>
+</section>
+
+<section id="skills">
+  <app-skills></app-skills>
+</section>
+
+<section id="contact">
+  <app-contact></app-contact>
+</section>
+
+
+<router-outlet></router-outlet>
+<app-admin-home></app-admin-home> -->
+
+<!-- <app-navbar></app-navbar>
+
+<section id="home">
+  <app-home></app-home>
+</section>
+
+
+<section id="about">
+  <app-about></app-about>
+</section>
+
+<section id="portfolio">
+  <app-portfolio></app-portfolio>
+</section>
+
+<section id="skills">
+  <app-skills></app-skills>
+</section>
+
+<section id="contact">
+  <app-contact></app-contact>
+</section> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-admin-home></app-admin-home> -->
+<div *ngIf="!isAdminRoute">
+<app-navbar></app-navbar>
+
+<!-- Main content -->
+<section id="home">
+  <app-home></app-home>
+</section>
+<section id="about">
+  <app-about></app-about>
+</section>
+<section id="portfolio">
+  <app-portfolio></app-portfolio>
+</section>
+<section id="skills">
+  <app-skills></app-skills>
+</section>
+<section id="contact">
+  <app-contact></app-contact>
+</section>
+</div>
+<router-outlet></router-outlet>

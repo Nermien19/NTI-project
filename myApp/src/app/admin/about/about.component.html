@@ -1,0 +1,13 @@
+<!-- src/app/admin/admin-about/admin-about.component.html -->
+<form (ngSubmit)="saveAbout()">
+  <label for="title">Title:</label>
+  <input id="title" [(ngModel)]="aboutData.title" name="title" />
+
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="aboutData.description" name="description"></textarea>
+
+  <!-- <label for="imageUrl">Image URL:</label>
+  <input id="imageUrl" [(ngModel)]="aboutData.imageUrl" name="imageUrl" /> -->
+
+  <button type="submit">Save</button>
+</form>

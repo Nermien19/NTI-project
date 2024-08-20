@@ -1,0 +1,23 @@
+<div class="admin-control-panel">
+  <h2>Admin Control Panel</h2>
+
+  <form>
+    <label for="greetings">Greetings:</label>
+    <input type="text" id="greetings" [(ngModel)]="portfolioData.greetings" name="greetings">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="portfolioData.name" name="name">
+
+    <label for="jobTitle">Job Title:</label>
+    <input type="text" id="jobTitle" [(ngModel)]="portfolioData.jobTitle" name="jobTitle">
+
+    <label for="nationality">Nationality:</label>
+    <input type="text" id="nationality" [(ngModel)]="portfolioData.nationality" name="nationality">
+
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="portfolioData.description" name="description"></textarea>
+  </form>
+
+
+  <button type="button" (click)="updatePortfolio()">Update Portfolio</button>
+</div>
