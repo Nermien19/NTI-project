@@ -1,23 +1,28 @@
-<!-- <div class="admin-control-panel"> -->
-  <!-- <h2>Admin Control Panel</h2> -->
+<!-- src/app/admin/home/home.component.html -->
+<form (ngSubmit)="saveHome()">
+  <label for="greetings">Greetings:</label>
+  <input id="greetings" [(ngModel)]="homeData.greetings" name="greetings" />
 
-  <!-- <form>
-    <label for="greetings">Greetings:</label>
-    <input type="text" id="greetings" [(ngModel)]="portfolioData.greetings" name="greetings">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="homeData.name" name="name" />
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" [(ngModel)]="portfolioData.name" name="name">
+  <label for="jobTitle">Job Title:</label>
+  <input id="jobTitle" [(ngModel)]="homeData.jobTitle" name="jobTitle" />
 
-    <label for="jobTitle">Job Title:</label>
-    <input type="text" id="jobTitle" [(ngModel)]="portfolioData.jobTitle" name="jobTitle">
+  <label for="nationality">Nationality:</label>
+  <input id="nationality" [(ngModel)]="homeData.nationality" name="nationality" />
 
-    <label for="nationality">Nationality:</label>
-    <input type="text" id="nationality" [(ngModel)]="portfolioData.nationality" name="nationality">
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="homeData.description" name="description"></textarea>
 
-    <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="portfolioData.description" name="description"></textarea>
-  </form> -->
+  <button type="submit">Save</button>
+</form>
 
-<!--
-  <button type="button" (click)="updatePortfolio()">Update Portfolio</button> -->
-<!-- </div> -->
+<button *ngIf="homeData._id" (click)="deleteHome()">Delete</button>
+
+<ul>
+  <li *ngFor="let home of homeList">
+    {{ home.greetings }} - {{ home.name }} - {{ home.jobTitle }} - {{ home.nationality }}
+    <button (click)="editHome(home)">Edit</button>
+  </li>
+</ul>

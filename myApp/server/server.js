@@ -19,9 +19,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/portfolio', {
 
 // Import routes
 const aboutRoutes = require('./routes/about');
-
+const homeRouter = require('./routes/home');
 // Use routes
 app.use('/admin/about', aboutRoutes);
+
+
+app.use(express.json());
+app.use('/admin/home', homeRouter);
 
 // Start the server
 const PORT = process.env.PORT || 3000;

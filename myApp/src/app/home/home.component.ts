@@ -1,21 +1,24 @@
+// src/app/portfolio/home/home.component.ts
 import { Component, OnInit } from '@angular/core';
-// import { PortfolioData, PortfolioService } from '../portfolio.service';
+import { HomeService } from '../services/home.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent
-// implements OnInit
-{
-  // portfolioData!: PortfolioData;
+export class HomeComponent implements OnInit {
+  homeData: any = {};
 
-  // constructor(private portfolioService: PortfolioService) { }
+  constructor(private homeService: HomeService) {}
 
-  // ngOnInit(): void {
-  //   this.portfolioService.portfolioData$.subscribe(data => {
-  //     this.portfolioData = data;
-  //   });
-  // }
+  ngOnInit(): void {
+    this.loadHomeData();
+  }
 
+  loadHomeData() {
+    this.homeService.getHome().subscribe(data => {
+      this.homeData = data.length ? data[0] : {};
+    });
+  }
 }
