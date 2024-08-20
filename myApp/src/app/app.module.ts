@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,7 +45,8 @@ const routes: Routes = [
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()
@@ -52,5 +54,5 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  
+
  }

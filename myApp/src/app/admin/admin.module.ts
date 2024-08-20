@@ -41,7 +41,7 @@ const routes: Routes = [
     PortfolioComponent,
     SkillsComponent,
     NavBarComponent,
-    ContactComponent
+    ContactComponent,
     // Add other admin components here
   ],
   imports: [

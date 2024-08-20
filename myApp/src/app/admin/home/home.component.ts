@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PortfolioData, PortfolioService } from '../../portfolio.service';
+// import { PortfolioData, PortfolioService } from '../../portfolio.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +7,14 @@ import { PortfolioData, PortfolioService } from '../../portfolio.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  portfolioData: PortfolioData;
+  // portfolioData: PortfolioData;
 
-  constructor(private portfolioService: PortfolioService) {
-    this.portfolioData = this.portfolioService.getCurrentPortfolioData();
-  }
-  updatePortfolio() {
-    console.log('Update button clicked!');
-    this.portfolioService.updatePortfolioData(this.portfolioData);
-  }
+  // constructor(private portfolioService: PortfolioService) {
+  //   this.portfolioData = this.portfolioService.getCurrentPortfolioData();
+  // }
+  // updatePortfolio() {
+  //   console.log('Update button clicked!');
+  //   this.portfolioService.updatePortfolioData(this.portfolioData);
+  // }
 
 }

@@ -1,10 +1,11 @@
+// models/about.js
 const mongoose = require('mongoose');
 
-const AboutSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  subtitle:{ type: String, required: true },
-  description: { type: String, required: true },
-  imageUrl: { type: String },
+const aboutSchema = new mongoose.Schema({
+    title: String,
+    subtitle: String,
+    description: String,
+    image: String,
 });
 
-module.exports = mongoose.model('About', AboutSchema);
+module.exports = mongoose.model('About', aboutSchema);

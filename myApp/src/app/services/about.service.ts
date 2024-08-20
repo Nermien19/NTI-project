@@ -7,15 +7,45 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AboutService {
-  private apiUrl = 'http://localhost:3000/api/about';
+  // private apiUrl = 'http://localhost:3000/admin';
+
+  // constructor(private http: HttpClient) {}
+
+  // getAbout(): Observable<any> {
+  //   return this.http.get(`${this.apiUrl}`);
+  // }
+
+  // addAbout(about: any): Observable<any> {
+  //   return this.http.post(`${this.apiUrl}`, about);
+  // }
+
+  // updateAbout(id: string, about: any): Observable<any> {
+  //   return this.http.put(`${this.apiUrl}/${id}`, about);
+  // }
+
+  // deleteAbout(id: string): Observable<any> {
+  //   return this.http.delete(`${this.apiUrl}/${id}`);
+  // }
+
+
+  private apiUrl = 'http://localhost:3000/admin/about'; // Ensure this matches your Express routes
 
   constructor(private http: HttpClient) {}
 
   getAbout(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    
+    return this.http.get(`${this.apiUrl}`);
   }
 
-  updateAbout(id: string, data: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, data);
+  addAbout(about: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, about);
+  }
+
+  updateAbout(id: string, about: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, about);
+  }
+
+  deleteAbout(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

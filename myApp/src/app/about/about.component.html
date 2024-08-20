@@ -1,4 +1,4 @@
-<section class="about" id="About">
+<!-- <section class="about" id="About">
   <div class="about-img">
      <img src="./images/about me.jpg" title="img">
   </div>
@@ -9,4 +9,15 @@
     <a href="#" class="btn" >Hire Me</a>
     </div>
 
+    </section> -->
+    <section class="about" id="About" *ngIf="aboutData">
+      <div class="about-img">
+         <!-- <img [src]="aboutData.image" title="img"> -->
+      </div>
+      <div class="about-text">
+        <h3>{{ aboutData.title }}</h3>
+        <h2>{{ aboutData.subtitle }}</h2>
+        <p>{{ aboutData.description }}</p>
+        <a href="#" class="btn" >Hire Me</a>
+      </div>
     </section>

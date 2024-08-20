@@ -1,13 +1,25 @@
-<!-- src/app/admin/admin-about/admin-about.component.html -->
 <form (ngSubmit)="saveAbout()">
   <label for="title">Title:</label>
   <input id="title" [(ngModel)]="aboutData.title" name="title" />
 
-  <label for="description">Description:</label>
-  <textarea id="description" [(ngModel)]="aboutData.description" name="description"></textarea>
+  <label for="subtitle">Subtitle:</label>
+  <input id="subtitle" [(ngModel)]="aboutData.subtitle" name="subtitle" />
 
-  <!-- <label for="imageUrl">Image URL:</label>
-  <input id="imageUrl" [(ngModel)]="aboutData.imageUrl" name="imageUrl" /> -->
+  <label for="description">Description:</label>
+  <input id="description" [(ngModel)]="aboutData.description" name="description"/>
+
+  <label for="image">Image URL:</label>
+  <input id="image" [(ngModel)]="aboutData.image" name="image" />
 
   <button type="submit">Save</button>
 </form>
+
+  <button *ngIf="aboutData._id" (click)="deleteAbout()">Delete</button>
+
+
+<ul>
+  <li *ngFor="let about of aboutList">
+    {{ about.title }} - {{ about.subtitle }}
+    <button (click)="editAbout(about)">Edit</button>
+  </li>
+</ul>
