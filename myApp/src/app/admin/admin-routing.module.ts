@@ -7,6 +7,7 @@ import { adminAuthGuard } from './admin-auth.guard'; // Correct import
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,6 +15,7 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'portfolio', component: PortfolioComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
     ]

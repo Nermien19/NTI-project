@@ -1,12 +1,17 @@
 <section class="portflio" id="portflio">
-    <div class="heading">
-        <h3>portflio</h3>
+    <div *ngIf="portfolioData" class="heading">
+        <!-- <h3>portflio</h3>
         <h2>My Amazing Work</h2>
-        <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design</p>
+        <p>Most common methods for designing websites that work well on desktop is responsive and adaptive design</p> -->
+
+
+        <h3>{{ portfolioData.sectionName }}</h3>
+        <h2>{{ portfolioData.description }}</h2>
+        <p>{{ portfolioData.brief }}</p>
     </div>
 
-    <div class="portflio-content">
-        <div class="col">
+    <div *ngFor="let project of portfolioData.projects" class="portflio-content">
+        <!-- <div class="col">
             <img src="images/TamaraiLogoblue.png" title="image">
             <div class="layer">
                 <h3> Web Design</h3>
@@ -36,9 +41,30 @@
                 <h3> mini super market manegment system</h3>
                 <h5>Popup</h5>
             </div>
-        </div>
+        </div> -->
 
+        <div class="col">
+          <!-- <img *ngIf="project.image" [src]="project.image" alt="{{ project.name }}" /> -->
+          <img [src]="'http://localhost:3000/images/' + project.image" alt="{{ project.name }}" class="mini-super-market" title="{{ project.name }}">
 
+          <div class="layer">
+              <h3> {{ project.name }}</h3>
+              <h5 [innerHTML]="project.popup"></h5>
+          </div>
+      </div>
+
+        <!-- <div *ngIf="portfolioData">
+          <h2>{{ portfolioData.sectionName }}</h2>
+          <img [src]="portfolioData.image" alt="Portfolio Image" />
+          <p>{{ portfolioData.brief }}</p>
+          <p>{{ portfolioData.description }}</p>
+
+          <div *ngFor="let project of portfolioData.projects">
+            <h3>{{ project.name }}</h3>
+            <img [src]="project.image" alt="Project Image" />
+            <div [innerHTML]="project.popup"></div>
+          </div>
+        </div> -->
 
     </div>
 

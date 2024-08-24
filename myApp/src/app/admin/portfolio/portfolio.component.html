@@ -1,1 +1,38 @@
-<p>portfolio works!</p>
+<form (ngSubmit)="savePortfolioSection()">
+  <label for="sectionName">Section Name:</label>
+  <input id="sectionName" [(ngModel)]="portfolioData.sectionName" name="sectionName" />
+
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="portfolioData.description" name="description"></textarea>
+
+  <label for="brief">Brief:</label>
+  <textarea id="brief" [(ngModel)]="portfolioData.brief" name="brief"></textarea>
+
+  <label for="image">Image URL:</label>
+  <input id="image" [(ngModel)]="portfolioData.image" name="image" />
+
+  <button type="submit">Save Portfolio Section</button>
+</form>
+
+<h2>Projects</h2>
+<ul>
+  <li *ngFor="let project of portfolioData.projects">
+    {{ project.name }} -
+    <button (click)="editProject(project)">Edit</button>
+    <button (click)="deleteProject(project)">Delete</button>
+  </li>
+</ul>
+
+<form (ngSubmit)="saveProject()">
+  <label for="projectName">Project Name:</label>
+  <input id="projectName" [(ngModel)]="projectData.name" name="projectName" />
+
+  <label for="popup">Popup:</label>
+  <textarea id="popup" [(ngModel)]="projectData.popup" name="popup"></textarea>
+
+<label for="projectImage">Project Image:</label>
+<input type="file" id="projectImage" (change)="onFileChange($event)" />
+
+
+  <button type="submit">{{ projectData._id ? 'Update Project' : 'Save Project' }}</button>
+</form>
