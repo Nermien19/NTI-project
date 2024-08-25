@@ -1,14 +1,16 @@
 <section class="contact" id="Contact">
   <div class="container">
       <div class="center">
-          <h3>Let's chat about your ideas </h3>
-          <p>Feel free to send me an email </p>
+        <h3>{{ contact.title }}</h3>
+        <p>{{ contact.subtitle }}</p>
+          <!-- <h3>Let's chat about your ideas </h3>
+          <p>Feel free to send me an email </p> -->
       </div>
 
           <div class="action">
-          <form>
-          <input type="email" name="email" placeholder="Eenter Your Email" required>
-
+          <form (ngSubmit)="submitEmail()">
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Eenter Your Email" required>
+          <!-- <button type="submit">Submit</button> -->
               <input type="submit" name="submit" value="Submit">
 
           </form>

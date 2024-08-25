@@ -12,9 +12,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { SkillsComponent } from './skills/skills.component';
+// import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminModule } from './admin/admin.module';
+import { SkillsComponent } from './skills/skills.component';
+
 
 
 
@@ -37,10 +40,13 @@ const routes: Routes = [
     NavbarComponent,
     AboutComponent,
     PortfolioComponent,
+    ContactComponent,
     SkillsComponent,
-    ContactComponent
+    // AdminComponent
+
   ],
   imports: [
+    // AdminModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,

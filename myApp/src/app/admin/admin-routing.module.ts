@@ -8,6 +8,8 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +18,8 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'portfolio', component: PortfolioComponent },
+      { path: 'skills', component: SkillsComponent },
+      { path: 'contact', component: ContactComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
     ]

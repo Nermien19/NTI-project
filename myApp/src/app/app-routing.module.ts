@@ -4,9 +4,10 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { SkillsComponent } from './skills/skills.component';
+// import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppComponent } from './app.component';
+import { SkillsComponent } from './skills/skills.component';
 
 // const routes: Routes = [{path:'', redirectTo:'/home' , pathMatch: 'full'}, //this will make the default path is the home so , when the path is empty redirect to the home
 //   // {path:'about' , component:AboutComponent },
@@ -33,7 +34,7 @@ import { AppComponent } from './app.component';
 //   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 // ];
 const routes: Routes = [
-  
+
   { path: 'home', component: HomeComponent }, // Main application routes
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },

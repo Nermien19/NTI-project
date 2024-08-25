@@ -18,6 +18,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContactComponent } from './contact/contact.component';
 
 
+
 const routes: Routes = [
   // {
   //   path: '',
@@ -42,6 +43,7 @@ const routes: Routes = [
     SkillsComponent,
     NavBarComponent,
     ContactComponent,
+
     // Add other admin components here
   ],
   imports: [
