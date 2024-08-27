@@ -26,7 +26,9 @@ const homeRouter = require('./routes/home');
 const portfolioRoutes = require('./routes/portfolio');
 const skillsRoutes = require('./routes/skills');
 const contactRoutes = require('./routes/contact');
+const navbarRoutes = require('./routes/navbar');
 
+app.use('/admin/navbar', navbarRoutes);
 app.use('/admin/contact', contactRoutes);
 app.use('/admin/portfolio', portfolioRoutes);
 app.use('/admin/skills', skillsRoutes);
@@ -40,7 +42,7 @@ app.use('/admin/home', homeRouter);
 //   console.error('Error serving images directory:', error);
 // }
 
-
+app.use('/cv', express.static(path.join(__dirname, './cv')));
 app.use('/images', express.static(path.join(__dirname, './images')));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

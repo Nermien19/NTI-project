@@ -15,7 +15,10 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 <!-- <body> -->
     <header>
     <a class="logo">
-    <img src="/images/nermein_portfolio_logo_alex_transparent.png" title="img" ></a>
+      <img [src]="'http://localhost:3000/images/' + navbarData.logo" alt="logo image">
+      <!-- <img src="/images/nermein_portfolio_logo_alex_transparent.png" title="img" > -->
+  </a>
+    <!-- <img [src]="navbarData.logo" alt="Logo" /> -->
 <div class="bx bx-menu" id="menu-icon"></div>
 <ul class="navlist">
     <!-- <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
@@ -23,13 +26,13 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <li><a routerLink="/portfolio" routerLinkActive="active">portfolio</a></li>
     <li><a routerLink="/skills" routerLinkActive="active">skills</a></li>
     <li><a routerLink="/contact" routerLinkActive="active">contact</a></li> -->
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
 
-</ul>
-<a class="top-btn"   >Downlaod CV</a>
+      <li><a href="#home" class="active">{{ navbarData.home }}</a></li>
+      <li><a href="#about">{{ navbarData.about }}</a></li>
+      <li><a href="#portfolio">{{ navbarData.portfolio }}</a></li>
+      <li><a href="#skills">{{ navbarData.skills }}</a></li>
+      <li><a href="#contact">{{ navbarData.contact }}</a></li>
+    </ul>
+    <a [href]="'http://localhost:3000/cv/' + navbarData.cv" class="top-btn" download>Download CV</a>
 </header>
 <!-- </body> -->

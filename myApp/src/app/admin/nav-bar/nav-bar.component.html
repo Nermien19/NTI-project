@@ -1,1 +1,40 @@
-<p>nav-bar works!</p>
+<main>
+  <h1>Update Navbar</h1>
+  <form (ngSubmit)="saveNavbar()" enctype="multipart/form-data">
+    <!-- Logo Upload -->
+    <div class="input-box">
+      <label for="logo">Logo Image:</label>
+      <input type="file" id="logo" (change)="onLogoSelected($event)" />
+    </div>
+
+    <!-- CV Upload -->
+    <div class="input-box">
+      <label for="cv">CV File:</label>
+      <input type="file" id="cv" (change)="onCVSelected($event)" />
+    </div>
+
+    <!-- Other Navbar Links -->
+    <div class="input-box">
+      <label for="home">Home:</label>
+      <input id="home" [(ngModel)]="navbarData.home" name="home" />
+    </div>
+    <div class="input-box">
+      <label for="about">About:</label>
+      <input id="about" [(ngModel)]="navbarData.about" name="about" />
+    </div>
+    <div class="input-box">
+      <label for="portfolio">Portfolio:</label>
+      <input id="portfolio" [(ngModel)]="navbarData.portfolio" name="portfolio" />
+    </div>
+    <div class="input-box">
+      <label for="skills">Skills:</label>
+      <input id="skills" [(ngModel)]="navbarData.skills" name="skills" />
+    </div>
+    <div class="input-box">
+      <label for="contact">Contact:</label>
+      <input id="contact" [(ngModel)]="navbarData.contact" name="contact" />
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+</main>

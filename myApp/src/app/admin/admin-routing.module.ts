@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 const routes: Routes = [
   {
     path: '',
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'skills', component: SkillsComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'navbar', component: NavBarComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
     ]
