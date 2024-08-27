@@ -1,37 +1,73 @@
-<form (ngSubmit)="saveSkillsSection()">
+<main>
+  <div class="head-title">
+      <div class="left">
+          <h1>Skills Section</h1>
+          <ul class="breadcrumb">
+              <!-- <li>
+                  <a href="index.html">Dashboard</a>
+              </li> -->
+              <li><i class='bx bx-chevron-right'></i></li>
+              <!-- <li>
+                  <a class="active" href="#">About Scetion</a>
+              </li> -->
+          </ul>
+      </div>
+  </div>
+
+  <div class="table-data">
+    <div class="order">
+<form (ngSubmit)="saveSkillsSection()" class="form">
+  <div class="input-box">
     <label for="sectionName">Section Name:</label>
     <input id="sectionName" [(ngModel)]="skillsData.sectionName" name="sectionName" />
+  </div>
 <!--
     <label for="description">Description:</label>
     <textarea id="description" [(ngModel)]="skillsData.description" name="description"></textarea> -->
-
+    <div class="input-box">
     <label for="brief">Brief:</label>
     <textarea id="brief" [(ngModel)]="skillsData.brief" name="brief"></textarea>
-
+  </div>
     <!-- <label for="image">Image URL:</label>
     <input id="image" [(ngModel)]="skillsData.image" name="image" /> -->
 
     <button type="submit">Save Skills Section</button>
   </form>
-
-  <h2>Skills</h2>
+</div>
+</div>
+<div style="padding:7px" >
+  <h2 style="color:#cfb595">Skills:</h2>
+</div>
+  <div class="table-data">
+    <div class="order">
   <ul>
     <li *ngFor="let skill of skillsData.skills">
-      {{ skill.name }} -
-      <button (click)="editSkill(skill)">Edit</button>
-      <button (click)="deleteSkill(skill)">Delete</button>
+      <h4>{{ skill.name }}</h4>
+      <button (click)="editSkill(skill)" class="buttons">Edit</button>
+      <button (click)="deleteSkill(skill)" class="buttons">Delete</button>
     </li>
   </ul>
+</div>
+</div>
 
-  <form (ngSubmit)="saveSkill()">
+<div class="table-data">
+  <div class="order">
+  <form (ngSubmit)="saveSkill()" class="form">
+    <div class="input-box">
     <label for="skillName">Skill Name:</label>
     <input id="skillName" [(ngModel)]="skillData.name" name="skillName" />
+  </div>
 
+  <div class="input-box">
     <label for="description">Description:</label>
     <textarea id="description" [(ngModel)]="skillData.description" name="description"></textarea>
+  </div>
+
 
     <label for="skillImage">Skill Image:</label>
     <input type="file" id="skillImage" (change)="onFileChange($event)" />
 
     <button type="submit">{{ skillData._id ? 'Update Skill' : 'Save Skill' }}</button>
   </form>
+</div>
+</div>

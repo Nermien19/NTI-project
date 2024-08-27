@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<!-- <meta charset="UTF-8">
   <title>My App</title>
 <section class="home" id="home">
   <div class="home-text">
@@ -15,4 +15,23 @@
 </section>
 
 
+ -->
+
+ <!-- src/app/portfolio/home/home.component.html -->
+<section class="home" id="home">
+  <div class="home-text">
+    <h3>{{ homeData.greetings }}</h3>
+    <h1>{{ homeData.name }}</h1>
+    <h5>{{ homeData.jobTitle }} <span>{{ homeData.nationality }}</span></h5>
+    <p>{{ homeData.description }}</p>
+    <a href="#" class="btn">About Me</a>
+  </div>
+
+  <div class="home-img" *ngIf="homeData.image">
+    <img [src]="'http://localhost:3000/images/' + homeData.image"   alt="{{ homeData.name }} "
+    title="{{ homeData.name }}"
+   >
+
+  </div>
+</section>
 

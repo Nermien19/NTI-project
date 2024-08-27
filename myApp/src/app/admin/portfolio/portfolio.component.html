@@ -1,38 +1,79 @@
-<form (ngSubmit)="savePortfolioSection()">
+<main>
+  <div class="head-title">
+      <div class="left">
+          <h1>Portfolio Section</h1>
+          <ul class="breadcrumb">
+              <!-- <li>
+                  <a href="index.html">Dashboard</a>
+              </li> -->
+              <li><i class='bx bx-chevron-right'></i></li>
+              <!-- <li>
+                  <a class="active" href="#">About Scetion</a>
+              </li> -->
+          </ul>
+      </div>
+  </div>
+
+  <div class="table-data">
+    <div class="order">
+<form (ngSubmit)="savePortfolioSection()" class="form">
+  <div class="input-box">
   <label for="sectionName">Section Name:</label>
   <input id="sectionName" [(ngModel)]="portfolioData.sectionName" name="sectionName" />
+</div>
 
+<div class="input-box">
   <label for="description">Description:</label>
   <textarea id="description" [(ngModel)]="portfolioData.description" name="description"></textarea>
+</div>
 
+<div class="input-box">
   <label for="brief">Brief:</label>
   <textarea id="brief" [(ngModel)]="portfolioData.brief" name="brief"></textarea>
+</div>
 
+<div class="input-box">
   <label for="image">Image URL:</label>
   <input id="image" [(ngModel)]="portfolioData.image" name="image" />
+</div>
 
   <button type="submit">Save Portfolio Section</button>
 </form>
+</div>
+</div>
 
-<h2>Projects</h2>
+<div style="padding:7px" >
+  <h2 style="color:#cfb595">Projects:</h2>
+</div>
+<div class="table-data">
+  <div class="order">
 <ul>
   <li *ngFor="let project of portfolioData.projects">
-    {{ project.name }} -
-    <button (click)="editProject(project)">Edit</button>
-    <button (click)="deleteProject(project)">Delete</button>
+<h4>{{ project.name }}</h4>
+    <button (click)="editProject(project)"  class="buttons">Edit</button>
+    <button (click)="deleteProject(project)" class="buttons">Delete</button>
   </li>
 </ul>
+</div>
+</div>
 
-<form (ngSubmit)="saveProject()">
+<div class="table-data">
+  <div class="order">
+<form (ngSubmit)="saveProject()" class="form">
+  <div class="input-box">
   <label for="projectName">Project Name:</label>
-  <input id="projectName" [(ngModel)]="projectData.name" name="projectName" />
-
+  <input id="projectName" [(ngModel)]="projectData.name" name="projectName" title="input"/>
+</div>
+<div class="input-box">
   <label for="popup">Popup:</label>
   <textarea id="popup" [(ngModel)]="projectData.popup" name="popup"></textarea>
-
+</div>
 <label for="projectImage">Project Image:</label>
 <input type="file" id="projectImage" (change)="onFileChange($event)" />
 
 
   <button type="submit">{{ projectData._id ? 'Update Project' : 'Save Project' }}</button>
 </form>
+</div>
+</div>
+</main>

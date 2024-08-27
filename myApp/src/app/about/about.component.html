@@ -12,7 +12,7 @@
     </section> -->
     <section class="about" id="About" *ngIf="aboutData">
       <div class="about-img">
-         <!-- <img [src]="aboutData.image" title="img"> -->
+        <img [src]="'http://localhost:3000/images/' + aboutData.image" title="img" *ngIf="aboutData.image">
       </div>
       <div class="about-text">
         <h3>{{ aboutData.title }}</h3>

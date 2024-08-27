@@ -1,19 +1,46 @@
-<div class="contact-section">
-  <h2>Edit Contact Section</h2>
 
-  <div>
+<main>
+  <div class="head-title">
+      <div class="left">
+          <h1>Contact Section</h1>
+          <ul class="breadcrumb">
+              <!-- <li>
+                  <a href="index.html">Dashboard</a>
+              </li> -->
+              <li><i class='bx bx-chevron-right'></i></li>
+              <!-- <li>
+                  <a class="active" href="#">About Scetion</a>
+              </li> -->
+          </ul>
+      </div>
+  </div>
+
+
+  <!-- <h2>Edit Contact Section</h2> -->
+  <div class="table-data">
+    <div class="order">
+<div class="forms">
+  <div class="input-box">
     <label for="title">Title:</label>
     <input id="title" [(ngModel)]="contact.title" type="text" />
   </div>
 
-  <div>
+  <div class="input-box">
     <label for="subtitle">Subtitle:</label>
     <input id="subtitle" [(ngModel)]="contact.subtitle" type="text" />
   </div>
 
   <button (click)="saveContact()">Save Changes</button>
+</div>
+</div>
+</div>
 
-  <h3>Received Emails</h3>
+<div style="padding:7px" >
+  <h2 style="color:#cfb595">Received Emails:</h2>
+</div>
+
+  <div class="table-data">
+    <div class="order">
   <ul>
     <li *ngFor="let email of emailList">
       {{ email.email }} - {{ email.date | date:'short' }}
@@ -21,3 +48,7 @@
     </li>
   </ul>
 </div>
+</div>
+
+
+</main>

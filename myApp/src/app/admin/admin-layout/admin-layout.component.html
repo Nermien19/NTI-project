@@ -1,26 +1,132 @@
-<div class="admin-layout">
-  <!-- <header>
+<!-- <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
-    <h1>Admin Panel</h1>
-  </header> -->
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/admin/addDoctor.css">
+    <link rel="icon" href="../../images/logo.png" type="image/icon type" />
 
-  <div class="admin-content">
+    <title>AdminHub</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+    </style> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="admin-layout">
+      <!-- <i class='bx bx-menu'></i>
+      <a href="#" class="nav-link">Categories</a>
+      <form action="#">
+          <div class="form-input">
+              <input type="search" placeholder="Search...">
+              <button type="submit" class="search-btn"><i class='bx bx-search'
+                      title="Toggle Navigation"></i></button>
+          </div>
+      </form>
+      <a  class="profile">
+          <img src="/images/profile.jpg" alt="Image">
+      </a>
 
-    <nav class="admin-sidebar">
-      <ul>
-        <li><a routerLink="/admin/home">Home</a></li>
-        <li><a routerLink="/admin/login">Login</a></li>
-        <li><a routerLink="/admin/signup">Sign Up</a></li>
-        <li><a routerLink="/admin/about">About</a></li>
-        <li><a routerLink="/admin/portfolio">Portfolio</a></li>
-        <li><a routerLink="/admin/skills">Skills</a></li>
-        <li><a routerLink="/admin/contact">Contact</a></li>
-      </ul>
-    </nav>
+      <a th:href="@{/admin/index}" class="brand">
+        <i class="bx bxs-smile"></i>
+        <span class="text">AdminHub</span>
+    </a>
+    <ul class="side-menu top">
+        <li>
+            <a th:href="@{/admin/index}">
+                <i class="bx bxs-dashboard"></i>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+    </ul> -->
+
+      <div class="head-title">
+        <div class="left">
+            <!-- <h1 >Welcome to the Admin Hub</h1> -->
+            <ul class="breadcrumb">
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li><i class='bx bx-chevron-right'></i></li>
+                <li>
+                    <a class="active" href="#">Admin Hub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="admin-content">
+            <nav class="admin-sidebar">
 
 
-    <main class="admin-main">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
-</div>
+              <a th:href="@{/admin/index}" class="brand">
+              <i class="bx bxs-smile"></i>
+              <span class="text">AdminHub</span>
+          </a>
+          <ul class="side-menu top">
+              <li>
+                  <a routerLink="/admin/home">
+                      <i class="bx bxs-dashboard"></i>
+                      <span class="text">Home</span>
+                  </a>
+              </li>
+              <li>
+                <a routerLink="/admin/login">
+                  <i class="bx bxs-dashboard"></i>
+                  <span class="text">Login</span>
+              </a>
+          </li>
+          <li>
+            <a routerLink="/admin/signup">
+              <i class="bx bxs-dashboard"></i>
+              <span class="text">Sign Up</span>
+          </a>
+      </li>
+      <li>
+        <a routerLink="/admin/about">
+          <i class="bx bxs-dashboard"></i>
+          <span class="text">About</span>
+      </a>
+  </li>
+
+  <li>
+    <a routerLink="/admin/portfolio">
+      <i class="bx bxs-dashboard"></i>
+      <span class="text">Portfolio</span>
+  </a>
+</li>
+
+<li>
+  <a routerLink="/admin/skills">
+    <i class="bx bxs-dashboard"></i>
+    <span class="text">Skills</span>
+</a>
+</li>
+
+<li>
+  <a routerLink="/admin/contact">
+    <i class="bx bxs-dashboard"></i>
+    <span class="text">Contact</span>
+</a>
+</li>
+          </ul>
+                <!-- <ul>
+                    <li><a routerLink="/admin/home">Home</a></li>
+                    <li><a routerLink="/admin/login">Login</a></li>
+                    <li><a routerLink="/admin/signup">Sign Up</a></li>
+                    <li><a routerLink="/admin/about">About</a></li>
+                    <li><a routerLink="/admin/portfolio">Portfolio</a></li>
+                    <li><a routerLink="/admin/skills">Skills</a></li>
+                    <li><a routerLink="/admin/contact">Contact</a></li>
+                </ul>
+            <!-- </nav> -->
+          </nav>
+            <main class="admin-main">
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+    <!-- </div> -->
+<!-- </html> -->

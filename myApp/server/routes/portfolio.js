@@ -14,7 +14,7 @@ const Portfolio = require('../models/portfolio');
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, '../images'));
-    
+
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname)); // Append the current timestamp to the filename
@@ -26,7 +26,7 @@ const upload = multer({ storage: storage });
 router.get('/', async (req, res) => {
   try {
     const portfolio = await Portfolio.find();
-    
+
     res.json(portfolio);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -38,7 +38,24 @@ router.get('/admin/portfolio/:id', async (req, res) => {
       if (!portfolio) {
           return res.status(404).send('Portfolio not found');
       }
-      
+
+      // Ensure the image field is just the filename, e.g., 'image.jpg'
+      portfolio.projects.forEach(project => {
+          project.image = project.image && path.basename(project.image);
+      });
+
+      res.json(portfolio);
+  } catch (error) {
+      res.status(500).send('Server error');
+  }
+});
+router.get('/:id/project/:projectId', async (req, res) => {
+  try {
+      const portfolio = await Portfolio.findById(req.params.id);
+      if (!portfolio) {
+          return res.status(404).send('Portfolio not found');
+      }
+
       // Ensure the image field is just the filename, e.g., 'image.jpg'
       portfolio.projects.forEach(project => {
           project.image = project.image && path.basename(project.image);
@@ -106,7 +123,7 @@ router.put('/:id/project/:projectId', upload.single('image'), async (req, res) =
     project.popup = req.body.popup || project.popup;
 
     if (req.file) {
-      project.image = '/images/' + req.file.filename; // Save the image path relative to the public folder
+      project.image =  req.file.filename ; // Save the image path relative to the public folder
     }
 
     await portfolio.save();

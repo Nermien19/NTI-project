@@ -57,9 +57,9 @@ export class AboutComponent  implements OnInit {
   // }
 
 
-
   aboutData: any = { title: '', subtitle: '', description: '', image: '' };
   aboutList: any[] = [];
+  selectedImage: File | null = null;
 
   constructor(private aboutService: AboutService) {}
 
@@ -73,21 +73,24 @@ export class AboutComponent  implements OnInit {
     });
   }
 
+  onImageSelected(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
+
   saveAbout() {
-    console.log('Form Submitted:', this.aboutData);
     if (this.aboutData._id) {
-      this.aboutService.updateAbout(this.aboutData._id, this.aboutData).subscribe(() => {
+      // Pass `this.selectedImage` only if it's not null
+      this.aboutService.updateAbout(this.aboutData._id, this.aboutData, this.selectedImage as File).subscribe(() => {
         this.loadAboutSections();
         this.clearForm();
       });
     } else {
-      this.aboutService.addAbout(this.aboutData).subscribe(() => {
+      this.aboutService.addAbout(this.aboutData, this.selectedImage as File).subscribe(() => {
         this.loadAboutSections();
         this.clearForm();
       });
     }
   }
-
   editAbout(about: any) {
     this.aboutData = { ...about };
   }
@@ -103,5 +106,6 @@ export class AboutComponent  implements OnInit {
 
   clearForm() {
     this.aboutData = { title: '', subtitle: '', description: '', image: '' };
+    this.selectedImage = null;
   }
 }

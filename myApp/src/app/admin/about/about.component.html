@@ -1,25 +1,65 @@
-<form (ngSubmit)="saveAbout()">
+<main>
+  <div class="head-title">
+      <div class="left">
+          <h1>About Section</h1>
+          <ul class="breadcrumb">
+              <!-- <li>
+                  <a href="index.html">Dashboard</a>
+              </li> -->
+              <li><i class='bx bx-chevron-right'></i></li>
+              <!-- <li>
+                  <a class="active" href="#">About Scetion</a>
+              </li> -->
+          </ul>
+      </div>
+  </div>
+<div class="table-data">
+  <div class="order">
+<form (ngSubmit)="saveAbout()" class="form">
+  <div class="input-box">
   <label for="title">Title:</label>
   <input id="title" [(ngModel)]="aboutData.title" name="title" />
+</div>
 
+<div class="input-box">
   <label for="subtitle">Subtitle:</label>
   <input id="subtitle" [(ngModel)]="aboutData.subtitle" name="subtitle" />
+</div>
 
+<div class="input-box">
   <label for="description">Description:</label>
   <input id="description" [(ngModel)]="aboutData.description" name="description"/>
+</div>
 
-  <label for="image">Image URL:</label>
-  <input id="image" [(ngModel)]="aboutData.image" name="image" />
+
+  <label for="image">Image:</label>
+  <input id="image" type="file" (change)="onImageSelected($event)" />
+
 
   <button type="submit">Save</button>
+  <button *ngIf="aboutData._id" (click)="deleteAbout()" class = "buttons">Delete</button>
 </form>
+.
+</div>
+</div>
 
-  <button *ngIf="aboutData._id" (click)="deleteAbout()">Delete</button>
+
+	<div class="table-data">
+    <div class="order">
 
 
 <ul>
-  <li *ngFor="let about of aboutList">
-    {{ about.title }} - {{ about.subtitle }}
-    <button (click)="editAbout(about)">Edit</button>
+  <li *ngFor="let about of aboutList" >
+    {{ about.title }}
+    {{ about.subtitle }}
+    <button (click)="editAbout(about)" class = "buttons">Edit</button>
+
   </li>
 </ul>
+
+
+</div>
+</div>
+
+.
+</main>
