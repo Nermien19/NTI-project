@@ -19,7 +19,7 @@
   <!-- <h2>Edit Contact Section</h2> -->
   <div class="table-data">
     <div class="order">
-<div class="forms">
+<div class="form">
   <div class="input-box">
     <label for="title">Title:</label>
     <input id="title" [(ngModel)]="contact.title" type="text" />
@@ -36,15 +36,17 @@
 </div>
 
 <div style="padding:7px" >
-  <h2 style="color:#cfb595">Received Emails:</h2>
+  <h2 style="color:#cfb595">Received Messages:</h2>
 </div>
 
   <div class="table-data">
     <div class="order">
   <ul>
     <li *ngFor="let email of emailList">
-      {{ email.email }} - {{ email.date | date:'short' }}
-      <button (click)="deleteEmail(email._id)">Delete</button>
+      {{ email.email }} - date:  {{ email.date | date:'short' }}
+      <div>
+      <button (click)="deleteEmail(email._id)" class="buttons">Delete</button>
+    </div>
     </li>
   </ul>
 </div>

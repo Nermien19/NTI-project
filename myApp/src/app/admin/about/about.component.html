@@ -1,65 +1,57 @@
 <main>
   <div class="head-title">
-      <div class="left">
-          <h1>About Section</h1>
-          <ul class="breadcrumb">
-              <!-- <li>
-                  <a href="index.html">Dashboard</a>
-              </li> -->
-              <li><i class='bx bx-chevron-right'></i></li>
-              <!-- <li>
-                  <a class="active" href="#">About Scetion</a>
-              </li> -->
-          </ul>
-      </div>
+    <div class="left">
+      <h1>About Section</h1>
+      <ul class="breadcrumb">
+        <li><i class='bx bx-chevron-right'></i></li>
+      </ul>
+    </div>
   </div>
-<div class="table-data">
-  <div class="order">
-<form (ngSubmit)="saveAbout()" class="form">
-  <div class="input-box">
-  <label for="title">Title:</label>
-  <input id="title" [(ngModel)]="aboutData.title" name="title" />
-</div>
 
-<div class="input-box">
-  <label for="subtitle">Subtitle:</label>
-  <input id="subtitle" [(ngModel)]="aboutData.subtitle" name="subtitle" />
-</div>
-
-<div class="input-box">
-  <label for="description">Description:</label>
-  <input id="description" [(ngModel)]="aboutData.description" name="description"/>
-</div>
-
-
-  <label for="image">Image:</label>
-  <input id="image" type="file" (change)="onImageSelected($event)" />
-
-
-  <button type="submit">Save</button>
-  <button *ngIf="aboutData._id" (click)="deleteAbout()" class = "buttons">Delete</button>
-</form>
-.
-</div>
-</div>
-
-
-	<div class="table-data">
+  <div class="table-data">
     <div class="order">
+      <form (ngSubmit)="saveAbout()" class="form">
+        <div class="input-box">
+          <label for="title">Title:</label>
+          <input id="title" [(ngModel)]="aboutData.title" name="title" required />
+        </div>
 
+        <div class="input-box">
+          <label for="subtitle">Subtitle:</label>
+          <input id="subtitle" [(ngModel)]="aboutData.subtitle" name="subtitle" required />
+        </div>
 
-<ul>
-  <li *ngFor="let about of aboutList" >
-    {{ about.title }}
-    {{ about.subtitle }}
-    <button (click)="editAbout(about)" class = "buttons">Edit</button>
+        <div class="input-box">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="aboutData.description" name="description" required></textarea>
+        </div>
 
-  </li>
-</ul>
+        <label for="image">Image:</label>
+        <input id="image" type="file" (change)="onFileSelected($event)" />
 
+        <!-- Error message if any required fields are empty -->
+        <!-- <div *ngIf="!aboutData.title || !aboutData.subtitle || !aboutData.description" class="error-message">
+          Please fill in all required fields.
+        </div> -->
 
-</div>
-</div>
+        <button [disabled]="!aboutData.title || !aboutData.subtitle || !aboutData.description" type="submit">Save</button>
+        <!-- <button *ngIf="aboutData._id" (click)="deleteAbout()" class="buttons">Delete</button> -->
+      </form>
+    </div>
+  </div>
 
-.
+  <div class="table-data">
+    <div class="order">
+      <ul>
+        <li *ngFor="let about of aboutList">
+          <h3>{{ about.title }}</h3>
+          <h3>{{ about.subtitle }}</h3>
+          <h3>{{ about.description }}</h3>
+          <div>
+            <button (click)="editAbout(about)" class="buttons">Edit</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </main>

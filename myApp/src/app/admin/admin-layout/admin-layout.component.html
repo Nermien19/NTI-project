@@ -49,11 +49,11 @@
             <!-- <h1 >Welcome to the Admin Hub</h1> -->
             <ul class="breadcrumb">
                 <li>
-                    <a href="index.html">Dashboard</a>
+                    <a >Dashboard</a>
                 </li>
                 <li><i class='bx bx-chevron-right'></i></li>
                 <li>
-                    <a class="active" href="#">Admin Hub</a>
+                    <a class="active" >Admin Hub</a>
                 </li>
             </ul>
         </div>
@@ -62,29 +62,27 @@
             <nav class="admin-sidebar">
 
 
-              <a th:href="@{/admin/index}" class="brand">
+              <a  class="brand">
               <i class="bx bxs-smile"></i>
               <span class="text">AdminHub</span>
           </a>
           <ul class="side-menu top">
+
+            <li>
+              <a routerLink="/admin/navbar">
+                <i class="bx bxs-dashboard"></i>
+                <span class="text">NavBar</span>
+            </a>
+            </li>
+
               <li>
                   <a routerLink="/admin/home">
                       <i class="bx bxs-dashboard"></i>
                       <span class="text">Home</span>
                   </a>
               </li>
-              <li>
-                <a routerLink="/admin/login">
-                  <i class="bx bxs-dashboard"></i>
-                  <span class="text">Login</span>
-              </a>
-          </li>
-          <li>
-            <a routerLink="/admin/signup">
-              <i class="bx bxs-dashboard"></i>
-              <span class="text">Sign Up</span>
-          </a>
-      </li>
+
+
       <li>
         <a routerLink="/admin/about">
           <i class="bx bxs-dashboard"></i>
@@ -114,10 +112,12 @@
 </li>
 
 
+
+
 <li>
-  <a routerLink="/admin/navbar">
+  <a routerLink="/admin/login">
     <i class="bx bxs-dashboard"></i>
-    <span class="text">NavBar</span>
+    <span class="text">Login</span>
 </a>
 </li>
           </ul>

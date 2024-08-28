@@ -68,26 +68,12 @@ export class AboutService {
     return this.http.get(`${this.apiUrl}`);
   }
 
-  addAbout(about: any, image: File| null): Observable<any> {
-    const formData = new FormData();
-    formData.append('title', about.title);
-    formData.append('subtitle', about.subtitle);
-    formData.append('description', about.description);
-    if (image) {
-      formData.append('image', image);
-    }
-    return this.http.post(`${this.apiUrl}`, formData);
+  addAbout(about: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, about);
   }
 
-  updateAbout(id: string, about: any, image: File | null): Observable<any> {
-    const formData = new FormData();
-    formData.append('title', about.title);
-    formData.append('subtitle', about.subtitle);
-    formData.append('description', about.description);
-    if (image) {
-      formData.append('image', image); // Append the image only if it's provided
-    }
-    return this.http.put(`${this.apiUrl}/${id}`, formData);
+  updateAbout(id: string, about: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, about);
   }
 
   deleteAbout(id: string): Observable<any> {

@@ -90,6 +90,16 @@ router.get('/', async (req, res) => { // Change from '/about' to '/'
     res.status(500).json({ message: err.message });
   }
 });
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const about = await About.findOne().sort({ updatedAt: -1 }); // Find the most recent entry
+//     res.status(200).json(about);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// });
+
 // Create or Update About Section
 router.post('/', upload.single('image'), async (req, res) => {
   try {

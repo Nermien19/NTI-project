@@ -1,75 +1,69 @@
-<!-- src/app/admin/home/home.component.html -->
 <main>
   <div class="head-title">
-      <div class="left">
-          <h1>Home Section</h1>
-          <ul class="breadcrumb">
-              <!-- <li>
-                  <a href="index.html">Dashboard</a>
-              </li> -->
-              <li><i class='bx bx-chevron-right'></i></li>
-              <!-- <li>
-                  <a class="active" href="#">About Scetion</a>
-              </li> -->
-          </ul>
-      </div>
+    <div class="left">
+      <h1>Home Section</h1>
+      <ul class="breadcrumb">
+        <li><i class='bx bx-chevron-right'></i></li>
+      </ul>
+    </div>
   </div>
-
 
   <div class="table-data">
     <div class="order">
+      <form (ngSubmit)="saveHome()" class="form">
+        <div class="input-box">
+          <label for="greetings">Greetings:</label>
+          <input id="greetings" [(ngModel)]="homeData.greetings" name="greetings" required />
+        </div>
 
+        <div class="input-box">
+          <label for="name">Name:</label>
+          <input id="name" [(ngModel)]="homeData.name" name="name" required />
+        </div>
 
-<form (ngSubmit)="saveHome()" class="form">
-  <div class="input-box">
-  <label for="greetings">Greetings:</label>
-  <input id="greetings" [(ngModel)]="homeData.greetings" name="greetings" />
-</div>
+        <div class="input-box">
+          <label for="jobTitle">Job Title:</label>
+          <input id="jobTitle" [(ngModel)]="homeData.jobTitle" name="jobTitle" required />
+        </div>
 
-<div class="input-box">
-  <label for="name">Name:</label>
-  <input id="name" [(ngModel)]="homeData.name" name="name" />
-</div>
+        <div class="input-box">
+          <label for="nationality">Nationality:</label>
+          <input id="nationality" [(ngModel)]="homeData.nationality" name="nationality" required />
+        </div>
 
-<div class="input-box">
-  <label for="jobTitle">Job Title:</label>
-  <input id="jobTitle" [(ngModel)]="homeData.jobTitle" name="jobTitle" />
-</div>
+        <div class="input-box">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="homeData.description" name="description" required></textarea>
+        </div>
 
-<div class="input-box">
-  <label for="nationality">Nationality:</label>
-  <input id="nationality" [(ngModel)]="homeData.nationality" name="nationality" />
-</div>
+        <label for="image">Image:</label>
+        <input id="image" type="file" (change)="onFileSelected($event)" />
 
-<div class="input-box">
-  <label for="description">Description:</label>
-  <textarea id="description" [(ngModel)]="homeData.description" name="description"></textarea>
-</div>
+        <!-- Error message if any required fields are empty -->
+        <!-- <div *ngIf="!homeData.greetings  || !homeData.name || !homeData.jobTitle || !homeData.nationality || !homeData.description" class="error-message">
+          Please fill in all required fields.
+        </div> -->
 
+        <button [disabled]="!homeData.greetings || !homeData.name || !homeData.jobTitle || !homeData.nationality || !homeData.description" type="submit">Save</button>
+        <!-- <button *ngIf="homeData._id" (click)="deleteHome()" class="buttons">Delete</button> -->
+      </form>
+    </div>
+  </div>
 
-  <label for="image">Image:</label>
-  <input id="image" type="file" (change)="onFileSelected($event)" />
-
-
-  <button type="submit">Save</button>
-  <button *ngIf="homeData._id" (click)="deleteHome()" class ="buttons">Delete</button>
-
-</form>
-</div>
-</div>
-
-
-<div class="table-data">
-  <div class="order">
-<ul>
-  <li *ngFor="let home of homeList">
-    <h3>{{ home.greetings }}</h3>
-    <h3>{{ home.name }} </h3>
-      <h3>{{ home.jobTitle }}</h3>
-        <h3>{{ home.nationality }}</h3>
-    <button (click)="editHome(home)" class ="buttons">Edit</button>
-  </li>
-</ul>
-</div>
-</div>
+  <div class="table-data">
+    <div class="order">
+      <ul>
+        <li *ngFor="let home of homeList">
+          <h3>{{ home.greetings }}</h3>
+          <h3>{{ home.name }}</h3>
+          <h3>{{ home.jobTitle }}</h3>
+          <h3>{{ home.nationality }}</h3>
+          <h3>{{ home.description }}</h3>
+          <div>
+            <button (click)="editHome(home)" class="buttons">Edit</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </main>

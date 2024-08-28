@@ -1,19 +1,19 @@
 <main>
   <h1>Update Navbar</h1>
-  <form (ngSubmit)="saveNavbar()" enctype="multipart/form-data">
-    <!-- Logo Upload -->
-    <div class="input-box">
+  <form (ngSubmit)="saveNavbar()" enctype="multipart/form-data" class="form">
+
+    <!-- <div class="input-box"> -->
       <label for="logo">Logo Image:</label>
       <input type="file" id="logo" (change)="onLogoSelected($event)" />
-    </div>
+    <!-- </div> -->
 
-    <!-- CV Upload -->
-    <div class="input-box">
+
+    <!-- <div class="input-box"> -->
       <label for="cv">CV File:</label>
       <input type="file" id="cv" (change)="onCVSelected($event)" />
-    </div>
+    <!-- </div> -->
 
-    <!-- Other Navbar Links -->
+
     <div class="input-box">
       <label for="home">Home:</label>
       <input id="home" [(ngModel)]="navbarData.home" name="home" />
@@ -35,6 +35,6 @@
       <input id="contact" [(ngModel)]="navbarData.contact" name="contact" />
     </div>
 
-    <button type="submit">Save</button>
+    <button [disabled]="!navbarData.home || !navbarData.about|| !navbarData.portfolio || !navbarData.skills || !navbarData.contact " type="submit" >Save</button>
   </form>
 </main>

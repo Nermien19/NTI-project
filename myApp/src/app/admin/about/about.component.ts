@@ -59,7 +59,7 @@ export class AboutComponent  implements OnInit {
 
   aboutData: any = { title: '', subtitle: '', description: '', image: '' };
   aboutList: any[] = [];
-  selectedImage: File | null = null;
+  selectedFile: File | null = null;
 
   constructor(private aboutService: AboutService) {}
 
@@ -73,24 +73,32 @@ export class AboutComponent  implements OnInit {
     });
   }
 
-  onImageSelected(event: any) {
-    this.selectedImage = event.target.files[0];
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
   }
 
   saveAbout() {
+    const formData = new FormData();
+    formData.append('title', this.aboutData.title);
+    formData.append('subtitle', this.aboutData.subtitle);
+    formData.append('description', this.aboutData.description);
+    if (this.selectedFile) {
+      formData.append('image', this.selectedFile);
+    }
+
     if (this.aboutData._id) {
-      // Pass `this.selectedImage` only if it's not null
-      this.aboutService.updateAbout(this.aboutData._id, this.aboutData, this.selectedImage as File).subscribe(() => {
+      this.aboutService.updateAbout(this.aboutData._id, formData).subscribe(() => {
         this.loadAboutSections();
         this.clearForm();
       });
     } else {
-      this.aboutService.addAbout(this.aboutData, this.selectedImage as File).subscribe(() => {
+      this.aboutService.addAbout(formData).subscribe(() => {
         this.loadAboutSections();
         this.clearForm();
       });
     }
   }
+
   editAbout(about: any) {
     this.aboutData = { ...about };
   }
@@ -106,6 +114,6 @@ export class AboutComponent  implements OnInit {
 
   clearForm() {
     this.aboutData = { title: '', subtitle: '', description: '', image: '' };
-    this.selectedImage = null;
+    this.selectedFile = null;
   }
 }

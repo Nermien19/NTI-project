@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { SkillsComponent } from './skills/skills.component';
+import { LoginComponent } from './login/login/login.component';
 
 
 
@@ -42,6 +43,7 @@ const routes: Routes = [
     PortfolioComponent,
     ContactComponent,
     SkillsComponent,
+    LoginComponent,
     // AdminComponent
 
   ],

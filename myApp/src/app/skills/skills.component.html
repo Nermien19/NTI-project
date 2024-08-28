@@ -1,8 +1,22 @@
 <section class="service" id="skills">
   <div *ngIf="skillsSection" class="heading">
-    <h3>{{ skillsSection.sectionName }}</h3>
-    <h2>{{ skillsSection.description }}</h2>
-    <p class="skills-brief">{{ skillsSection.brief }}</p>
+    <h3
+    style="color: var(--main-color);
+    font-size: 20px;
+    font-weight: 500;">
+    {{ skillsSection.sectionName }}
+  </h3>
+
+
+    <h2
+    style="color:#833e10;
+    font-size:var(--h2-font) ;
+    font-weight: 500;
+    margin: 7px 0px 20px;
+    line-height: 1.1">{{ skillsSection.description }}</h2>
+
+
+    <p >{{ skillsSection.brief }}</p>
   </div>
     <div class="service-content">
     <div *ngFor="let skill of skillsSection.skills" class="row">

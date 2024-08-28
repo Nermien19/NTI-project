@@ -1,20 +1,42 @@
-<section class="skills" id="portflio">
-    <div *ngIf="portfolioData" class="heading">
+
+<div *ngIf="portfolioData" class="heading"  >
 
 
 
-        <h3>{{ portfolioData.sectionName }}</h3>
-        <h2>{{ portfolioData.description }}</h2>
-        <p>{{ portfolioData.brief }}</p>
-    </div>
+  <h3  style="color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;">
+  {{ portfolioData.sectionName }}</h3>
+
+
+  <h2 style="color:#833e10;
+  font-size:var(--h2-font) ;
+  font-weight: 500;
+  margin: 7px 0px 20px;
+  line-height: 1.1">
+  {{ portfolioData.description }}</h2>
+  <p>{{ portfolioData.brief }}</p>
+</div>
+
+<section class="portflio" id="portflio" style=" display:grid;
+grid-template-columns: repeat(auto-fit , minmax(400px,auto));
+align-items:center;
+grid-gap:2rem;
+margin-top: 5rem;">
+
 
     <div *ngFor="let project of portfolioData.projects" class="portflio-content">
 
-        <div class="col">
+        <div class="col" >
 
     <img [src]="'http://localhost:3000/images/' + project.image"   alt="{{ project.name }} "
     title="{{ project.name }}"
-   >
+      style=" max-width: 100%;
+      width: 550px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      position: relative;">
 
     <div class="layer">
         <h3> {{ project.name }}</h3>

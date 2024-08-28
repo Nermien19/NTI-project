@@ -1,0 +1,35 @@
+<Main><div class="head-title">
+  <div class="left">
+    <h1>Admin Login</h1>
+    <ul class="breadcrumb">
+      <!-- <li>
+          <a href="index.html">Dashboard</a>
+      </li> -->
+      <li><i class='bx bx-chevron-right'></i></li>
+      <!-- <li>
+          <a class="active" href="#">About Scetion</a>
+      </li> -->
+  </ul>
+  </div>
+</div>
+
+<div class="table-data">
+  <div class="order">
+
+  <form (ngSubmit)="onSubmit()" class="form">
+    <div class="input-box">
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="input-box">
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <button type="submit">Login</button>
+  </form>
+<!-- </div> -->
+</div>
+</div>
+
+</Main>

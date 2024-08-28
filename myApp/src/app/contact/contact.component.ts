@@ -25,11 +25,11 @@ export class ContactComponent {
   submitEmail(): void {
     if (this.email) {
       this.contactService.submitEmail(this.email).subscribe(() => {
-        alert('Email sent');
+        alert('message sent');
         this.email = '';
       });
     } else {
-      alert('Please enter a valid email');
+      alert('Please enter a valid message');
     }
   }
 }

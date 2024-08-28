@@ -3,44 +3,39 @@
       <div class="left">
           <h1>Portfolio Section</h1>
           <ul class="breadcrumb">
-              <!-- <li>
-                  <a href="index.html">Dashboard</a>
-              </li> -->
               <li><i class='bx bx-chevron-right'></i></li>
-              <!-- <li>
-                  <a class="active" href="#">About Scetion</a>
-              </li> -->
           </ul>
       </div>
   </div>
 
   <div class="table-data">
     <div class="order">
-<form (ngSubmit)="savePortfolioSection()" class="form">
-  <div class="input-box">
-  <label for="sectionName">Section Name:</label>
-  <input id="sectionName" [(ngModel)]="portfolioData.sectionName" name="sectionName" />
-</div>
+      <form (ngSubmit)="savePortfolioSection()" class="form">
+        <div class="input-box">
+          <label for="sectionName">Section Name:</label>
+          <input id="sectionName" [(ngModel)]="portfolioData.sectionName" name="sectionName" required />
+        </div>
 
-<div class="input-box">
-  <label for="description">Description:</label>
-  <textarea id="description" [(ngModel)]="portfolioData.description" name="description"></textarea>
-</div>
+        <div class="input-box">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="portfolioData.description" name="description" required></textarea>
+        </div>
 
-<div class="input-box">
-  <label for="brief">Brief:</label>
-  <textarea id="brief" [(ngModel)]="portfolioData.brief" name="brief"></textarea>
-</div>
+        <div class="input-box">
+          <label for="brief">Brief:</label>
+          <textarea id="brief" [(ngModel)]="portfolioData.brief" name="brief" required></textarea>
+        </div>
 
-<div class="input-box">
-  <label for="image">Image URL:</label>
-  <input id="image" [(ngModel)]="portfolioData.image" name="image" />
-</div>
+        <div *ngIf="!portfolioData.sectionName || !portfolioData.description || !portfolioData.brief" class="error-message">
+          Please fill in all required fields.
+        </div>
 
-  <button type="submit">Save Portfolio Section</button>
-</form>
-</div>
-</div>
+        <button [disabled]="!portfolioData.sectionName || !portfolioData.description || !portfolioData.brief" type="submit">Save Portfolio Section</button>
+      </form>
+    </div>
+  </div>
+
+
 
 <div style="padding:7px" >
   <h2 style="color:#cfb595">Projects:</h2>

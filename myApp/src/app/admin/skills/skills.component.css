@@ -717,6 +717,11 @@ textarea {
    /* #d45930 */
    #cfb595;
 }
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
 
 #header {
 	text-align: center;

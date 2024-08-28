@@ -3,38 +3,39 @@
       <div class="left">
           <h1>Skills Section</h1>
           <ul class="breadcrumb">
-              <!-- <li>
-                  <a href="index.html">Dashboard</a>
-              </li> -->
               <li><i class='bx bx-chevron-right'></i></li>
-              <!-- <li>
-                  <a class="active" href="#">About Scetion</a>
-              </li> -->
           </ul>
       </div>
   </div>
 
   <div class="table-data">
     <div class="order">
-<form (ngSubmit)="saveSkillsSection()" class="form">
-  <div class="input-box">
-    <label for="sectionName">Section Name:</label>
-    <input id="sectionName" [(ngModel)]="skillsData.sectionName" name="sectionName" />
-  </div>
-<!--
-    <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="skillsData.description" name="description"></textarea> -->
-    <div class="input-box">
-    <label for="brief">Brief:</label>
-    <textarea id="brief" [(ngModel)]="skillsData.brief" name="brief"></textarea>
-  </div>
-    <!-- <label for="image">Image URL:</label>
-    <input id="image" [(ngModel)]="skillsData.image" name="image" /> -->
+      <form (ngSubmit)="saveSkillsSection()" class="form">
+        <div class="input-box">
+          <label for="sectionName">Section Name:</label>
+          <input id="sectionName" [(ngModel)]="skillsData.sectionName" name="sectionName" required />
+        </div>
 
-    <button type="submit">Save Skills Section</button>
-  </form>
-</div>
-</div>
+        <div class="input-box">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="skillsData.description" name="description" required></textarea>
+        </div>
+
+        <div class="input-box">
+          <label for="brief">Brief:</label>
+          <textarea id="brief" [(ngModel)]="skillsData.brief" name="brief" required></textarea>
+        </div>
+
+        <div *ngIf="!skillsData.sectionName || !skillsData.description || !skillsData.brief" class="error-message">
+          Please fill in all required fields.
+        </div>
+
+        <button [disabled]="!skillsData.sectionName || !skillsData.description || !skillsData.brief" type="submit">Save Skills Section</button>
+      </form>
+    </div>
+  </div>
+
+
 <div style="padding:7px" >
   <h2 style="color:#cfb595">Skills:</h2>
 </div>
@@ -60,7 +61,7 @@
 
   <div class="input-box">
     <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="skillData.description" name="description"></textarea>
+    <textarea  [(ngModel)]="skillData.description" name="description" title="textarea"></textarea>
   </div>
 
 
