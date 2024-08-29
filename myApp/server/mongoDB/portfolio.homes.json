@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "66c5154eac911a248bca209a"
+  },
+  "greetings": "Hi everyone, I am",
+  "name": "Nermein",
+  "jobTitle": ",Software developer",
+  "nationality": "based in Egypt",
+  "description": "I'm creative designer based in Egypt, and I am very passionate and dedicated to my work",
+  "__v": 0,
+  "image": "1724889007530.jpg"
+}]

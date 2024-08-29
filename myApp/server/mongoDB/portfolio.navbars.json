@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "66cdcd649a2abaae92c3d21f"
+  },
+  "home": "Home",
+  "about": "About",
+  "portfolio": "Portfolio",
+  "skills": "Skills",
+  "contact": "Contact",
+  "cv": "1724884060085.pdf",
+  "__v": 0,
+  "logo": "1724884060085.png"
+}]

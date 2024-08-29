@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { SkillsComponent } from './skills/skills.component';
 import { LoginComponent } from './login/login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+// import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -44,6 +46,8 @@ const routes: Routes = [
     ContactComponent,
     SkillsComponent,
     LoginComponent,
+    DashboardComponent,
+
     // AdminComponent
 
   ],

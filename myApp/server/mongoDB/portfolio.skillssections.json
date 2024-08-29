@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "66ca7aedf4e507dbedea9fcd"
+  },
+  "sectionName": "Skills",
+  "description": "most important skills and programing languages for web design",
+  "brief": "Most common methods for designing websites that work well on desktop is responsive and adaptive design",
+  "skills": [
+    {
+      "name": "mongo db",
+      "description": "What is a MongoDB used for?\r\n                    MongoDB is built on a scale-out architecture that has become popular with developers of all kinds for developing scalable applications with evolving data schemas. ",
+      "image": "1724882205881.jpg",
+      "_id": {
+        "$oid": "66ca8372c49b0e65c30dfe3c"
+      }
+    },
+    {
+      "name": "C++",
+      "description": "C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on. C++ supports different ways of programming like procedural, object-oriented, functional, and so on. This makes C++ powerful as well as flexible",
+      "image": "1724882266893.jpg",
+      "_id": {
+        "$oid": "66ca8678c49b0e65c30dfe92"
+      }
+    },
+    {
+      "name": "Java Script",
+      "description": "JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.  JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.",
+      "image": "1724882333167.jpg",
+      "_id": {
+        "$oid": "66cf9d9de9e2c26cdd6342d5"
+      }
+    },
+    {
+      "name": " Node JS",
+      "description": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.\r\n                Developers use Node. js to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven model.",
+      "image": "1724882378368.png",
+      "_id": {
+        "$oid": "66cf9dcae9e2c26cdd6342df"
+      }
+    },
+    {
+      "name": "Python",
+      "description": "Python is a popular programming language . Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python can be used on a server to create web applications.",
+      "image": "1724882432717.jpg",
+      "_id": {
+        "$oid": "66cf9e00e9e2c26cdd6342eb"
+      }
+    },
+    {
+      "name": "C",
+      "description": "C is a general-purpose computer programming language.  It can be used to develop software like operating systems, databases, compilers, and so on.",
+      "image": "1724882462517.png",
+      "_id": {
+        "$oid": "66cf9e1ee9e2c26cdd6342f9"
+      }
+    },
+    {
+      "name": "PHP",
+      "description": "A popular general-purpose scripting language that is especially suited to web development.\r\nFast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world",
+      "image": "1724882802033.jpeg",
+      "_id": {
+        "$oid": "66cf9f72e9e2c26cdd634309"
+      }
+    },
+    {
+      "name": "Spring Boot ",
+      "description": " Reduces time in development and increases productivity—Spring Boot makes it much easier to develop Spring-based apps with Java. Its opinionated approach to the Spring framework decreases the time spent on decisions and repetitive tasks and frees up time to focus on creating and testing the apps.",
+      "image": "1724882867388.jpeg",
+      "_id": {
+        "$oid": "66cf9fb3e9e2c26cdd63431b"
+      }
+    },
+    {
+      "name": "SQL ",
+      "description": "is a domain-specific language used to manage data, especially in a relational database management system (RDBMS). It is particularly useful in handling structured data, i.e., data incorporating relations among entities and variables.",
+      "image": "1724883049385.jpeg",
+      "_id": {
+        "$oid": "66cfa069e9e2c26cdd63432f"
+      }
+    },
+    {
+      "name": "HTML",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is a standardized system for tagging text files that creates the structure for just about every page that we find and use on the web.",
+      "image": "1724883786968.jpg",
+      "_id": {
+        "$oid": "66cfa34ae9e2c26cdd63444d"
+      }
+    },
+    {
+      "name": "CSS",
+      "description": "CSS is the language we use to style an HTML document.  CSS describes how HTML elements should be displayed.CSS stands for Cascading Style Sheets, and it's used to add style to a web page by dictating how a site is displayed on a browser",
+      "image": "1724883836442.jpg",
+      "_id": {
+        "$oid": "66cfa37ce9e2c26cdd634465"
+      }
+    },
+    {
+      "name": "EJS-Templating ",
+      "description": "EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.  Template engine helps to create an HTML template with minimal code. Also, it can inject data into an HTML template on the client side and produce the final HTML",
+      "image": "1724883890182.png",
+      "_id": {
+        "$oid": "66cfa3b2e9e2c26cdd63447f"
+      }
+    },
+    {
+      "name": "Adobe Photoshop",
+      "description": "Adobe Photoshop is a raster graphics editor. Photoshop can edit and compose raster images in multiple layers and supports masks, alpha compositing and several color models.",
+      "image": "1724883945772.jpg",
+      "_id": {
+        "$oid": "66cfa3e9e9e2c26cdd63449b"
+      }
+    }
+  ],
+  "__v": 15
+}]

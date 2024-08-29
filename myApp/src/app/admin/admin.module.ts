@@ -16,6 +16,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
     SkillsComponent,
     NavBarComponent,
     ContactComponent,
+    DashboardComponent,
 
     // Add other admin components here
   ],

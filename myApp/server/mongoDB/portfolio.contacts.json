@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "66cb5c6b6841b850448ff804"
+  },
+  "emails": [
+    {
+      "email": "Hi, nermein we saw your work and we would like you to join our team and collaborate on an amazing project , if you are interested send us an email : company@gmail.com. Thanks in advance",
+      "_id": {
+        "$oid": "66cf569e96741fdc9817ec8e"
+      },
+      "date": {
+        "$date": "2024-08-28T16:55:58.641Z"
+      }
+    },
+    {
+      "email": "Hi, nermein we saw your work and we would like you to join our team and collaborate on an amazing project , if you are interested send us an email : company@gmail.com. Thanks in advance",
+      "_id": {
+        "$oid": "66cf57d096741fdc9817ee2d"
+      },
+      "date": {
+        "$date": "2024-08-28T17:01:04.209Z"
+      }
+    },
+    {
+      "email": "Hi",
+      "_id": {
+        "$oid": "66cf57e096741fdc9817ee43"
+      },
+      "date": {
+        "$date": "2024-08-28T17:01:20.646Z"
+      }
+    }
+  ],
+  "title": "Let's chat about your ideas",
+  "subtitle": "Feel free to contact me ",
+  "__v": 15
+}]

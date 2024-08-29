@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "66c62db7783878cf8e5e260f"
+  },
+  "sectionName": "Portfolio",
+  "image": "img",
+  "brief": "Here are examples and photos of some of my work ",
+  "description": "My Amazing Work",
+  "projects": [
+    {
+      "name": "Outfit organizer",
+      "popup": "outfit organizer",
+      "image": "1724720064687.jpeg",
+      "_id": {
+        "$oid": "66c94d5725ba3000350aa216"
+      }
+    },
+    {
+      "name": "Mini Library management system ",
+      "popup": "pop up",
+      "image": "1724718029242.jpeg",
+      "_id": {
+        "$oid": "66cd1bcdcb8741db0743a34e"
+      }
+    },
+    {
+      "name": "Mini Supermarket System",
+      "popup": "Pop up",
+      "image": "1724719921401.jpg",
+      "_id": {
+        "$oid": "66cd23310a8bcdffaf7960ea"
+      }
+    },
+    {
+      "name": "Tamarai Art E-Commerce Website",
+      "popup": "pop Up",
+      "image": "1724720083855.png",
+      "_id": {
+        "$oid": "66cd239c0a8bcdffaf796118"
+      }
+    },
+    {
+      "name": "Pets Clinic ",
+      "popup": "pop up",
+      "image": "1724798131689.jpeg",
+      "_id": {
+        "$oid": "66ce54b329772b038e1870f2"
+      }
+    },
+    {
+      "name": "Pomodoro Timer ",
+      "popup": "pop up",
+      "image": "1724798163946.jpeg",
+      "_id": {
+        "$oid": "66ce54d329772b038e187100"
+      }
+    },
+    {
+      "name": "Dr. Merihan's Clinic",
+      "popup": "pop up",
+      "image": "1724798198663.jpeg",
+      "_id": {
+        "$oid": "66ce54f629772b038e187110"
+      }
+    },
+    {
+      "name": "Course Centre Pro",
+      "popup": "pop up",
+      "image": "1724883580968.jpeg",
+      "_id": {
+        "$oid": "66cfa27de9e2c26cdd6343ec"
+      }
+    }
+  ],
+  "__v": 51
+}]
