@@ -6,9 +6,9 @@ const contactSchema = new mongoose.Schema({
     emails: [
         {
             email: { type: String, required: true },
-            date: { type: Date, default: Date.now }
+            date: { type: Date, default: Date.now },
         }
-    ]
+    ],
 });
 
 module.exports = mongoose.model('Contact', contactSchema);
