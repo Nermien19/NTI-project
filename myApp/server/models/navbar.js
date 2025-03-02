@@ -8,7 +8,7 @@ const navbarSchema = new mongoose.Schema({
     about: String,
     portfolio: String,
     skills: String,
-    contact: String
+    contact: String,
 });
 
 module.exports = mongoose.model('Navbar', navbarSchema);
